@@ -35,7 +35,7 @@
     .left {
       background-color: #2E9DF7;
       color: #FFF7E1;
-      flex: 1;
+      flex: 0 0 50%; /* Fixed width half */
       padding: 40px 24px;
       display: flex;
       flex-direction: column;
@@ -48,7 +48,7 @@
       box-sizing: border-box;
       overflow-wrap: break-word;
       word-break: break-word;
-      max-width: 600px; /* Added max width to keep content narrower */
+      /* Keep text max width smaller to fit nicely inside 50% container */
     }
 
     h1 {
@@ -67,13 +67,13 @@
     }
 
     section {
-      margin-top: 40px; /* reduced margin-top slightly */
+      margin-top: 40px;
       background: rgba(255, 255, 255, 0.1);
-      padding: 25px 20px; /* slightly smaller padding */
+      padding: 25px 20px;
       border-radius: 12px;
       width: 100%;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      max-width: 600px; /* limit width */
+      max-width: 550px; /* slightly smaller max width */
       box-sizing: border-box;
     }
 
@@ -102,7 +102,7 @@
       display: inline-block;
       transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
       box-shadow: 0 6px 20px rgba(255, 184, 77, 0.6);
-      max-width: 600px; /* constrain width */
+      max-width: 550px;
       box-sizing: border-box;
     }
 
@@ -127,7 +127,7 @@
       border: 2px solid rgba(255, 201, 7, 0.6);
       transition: transform 0.3s ease;
       cursor: default;
-      max-width: 600px; /* constrain width */
+      max-width: 550px;
       box-sizing: border-box;
     }
 
@@ -141,7 +141,7 @@
 
     .right {
       background-color: #1a1a1a;
-      flex: 1;
+      flex: 0 0 50%; /* Fixed width half */
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -216,6 +216,7 @@
       }
       .right {
         height: 300px;
+        flex: 1 1 100%;
       }
       .right img {
         height: 300px;
@@ -225,6 +226,7 @@
         max-width: 100% !important;
         padding-left: 20px !important;
         padding-right: 20px !important;
+        flex: 1 1 100%;
       }
     }
 
@@ -285,6 +287,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
