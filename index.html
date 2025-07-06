@@ -108,30 +108,28 @@
     }
 
     .impact-message {
-      margin-top: 40px;
+      margin-top: 10px;
       background: rgba(255, 201, 7, 0.15);
       color: #FFC907;
-      padding: 24px 30px;
-      border-radius: 20px;
-      font-weight: 900;
+      padding: 12px 18px;
+      border-radius: 16px;
+      font-weight: 700;
       text-align: center;
-      width: 100%;
+      max-width: 400px;
+      font-size: 0.9rem;
       box-shadow:
-        0 0 15px 6px rgba(255, 201, 7, 0.5),
-        0 0 25px 12px rgba(255, 201, 7, 0.3);
-      border: 2px solid rgba(255, 201, 7, 0.6);
-      transition: transform 0.3s ease;
+        0 0 12px 4px rgba(255, 201, 7, 0.6),
+        0 0 18px 6px rgba(255, 201, 7, 0.3);
+      border: 1px solid rgba(255, 201, 7, 0.5);
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
       cursor: default;
-      max-width: 550px;
-      box-sizing: border-box;
     }
 
     .impact-message:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
       box-shadow:
-        0 0 20px 10px rgba(255, 201, 7, 0.7),
-        0 0 35px 15px rgba(255, 201, 7, 0.5);
-      cursor: pointer;
+        0 0 20px 8px rgba(255, 201, 7, 0.9),
+        0 0 30px 12px rgba(255, 201, 7, 0.6);
     }
 
     .right {
@@ -139,8 +137,10 @@
       flex: 0 0 50%;
       overflow: hidden;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
     }
 
     .right img {
@@ -149,6 +149,14 @@
       object-fit: cover;
       display: block;
       margin-top: -40px;
+    }
+
+    .impact-message-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      padding: 30px 0;
     }
 
     .topbar {
@@ -199,7 +207,6 @@
       color: #1a1a1a;
       padding: 16px 0;
       background-color: white;
-      text-shadow: none;
     }
   </style>
 </head>
@@ -231,13 +238,15 @@
           We provide real-time updates on every project funded. Track progress from start to finish and see the impact you’re making.
         </p>
       </section>
-
-      <div class="impact-message">
-        Just click the donate button above and see how you can impact the community.
-      </div>
     </div>
+
     <div class="right">
       <img src="6003_Ethiopia_2019_CG-.jpg" alt="Happy family in Ethiopia" />
+      <div class="impact-message-container">
+        <div class="impact-message">
+          Just click the donate button above and see how you can impact the community.
+        </div>
+      </div>
     </div>
   </div>
 
@@ -246,6 +255,11 @@
   </footer>
 </body>
 </html>
+
+
+
+
+
 
 
 
