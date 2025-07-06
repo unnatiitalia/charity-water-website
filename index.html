@@ -17,16 +17,12 @@
       width: 100vw;
       min-height: 80px;
       background: #fff;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      padding-left: 24px;
-      box-sizing: border-box;
+      position: relative;
       /* Prevent overflow from large logo */
       overflow: visible;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     body {
@@ -39,11 +35,18 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      padding: 20px;
-      /* Set padding-top to match the new topbar height */
-      padding-top: 96px;
-      /* Remove default margin to avoid extra space at the top */
+      /* Remove all padding so the topbar sits flush at the top */
+      padding: 0;
+      /* Set padding-top to match the topbar height only, so content starts below it */
+      padding-top: 0px;
       margin: 0;
+      /* Remove any top padding that causes a gap above the topbar */
+    }
+
+    html {
+      /* Ensure no margin or padding on html element */
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -60,6 +63,25 @@
       left: 24px;
       /* Optional: add drop shadow for contrast */
       /* filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08)); */
+    }
+
+    .topbar .btn-primary {
+      position: absolute;
+      top: 20px;
+      right: 32px;
+      z-index: 2;
+      font-size: 1.1rem;
+      width: 96px;
+      height: 42px;
+      padding: 0;
+      margin: 0;
+      align-self: center;
+      box-shadow: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
     }
 
     main {
@@ -135,22 +157,33 @@
       section {
         text-align: center;
       }
+      .topbar .btn-primary {
+        right: 12px;
+        font-size: 1rem;
+        padding: 8px 14px;
+        height: 36px;
+        top: 8px;
+      }
+      .topbar img {
+        height: 90px;
+        top: -20px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="topbar">
     <img src="charitywater_logo_horizontal_BlackText.png" alt="charity: water logo" />
+    <a href="https://www.charitywater.org/donate" class="btn-primary" target="_blank" rel="noopener noreferrer">
+      Donate
+    </a>
   </div>
 
   <main>
-    <h1>See the Change You Make. Instantly.</h1>
+    <h1 style="text-align: left; margin-left: 0;">See the Change You Make. Instantly.</h1>
     <p class="lead">
       100% of your donation funds clean water for families in need--and we'll show you exactly where every dollar goes, with ral time updates and impact you can feel.
     </p>
-    <a href="https://www.charitywater.org/donate" class="btn-primary" target="_blank" rel="noopener noreferrer">
-      Donate Now
-    </a>
 
     <section>
       <h2>Our Impact</h2>
