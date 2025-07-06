@@ -1,1 +1,2 @@
 # charity-water-website
+This website for charity: water, inspired by my landing page, highlights the impact of donations in providing clean water to families in need around the world. It emphasizes transparency by offering real-time updates on funded projects, allowing donors to see exactly how their contributions make a difference. The site features compelling messaging, clear calls to action with a prominent donate button, and showcases inspiring images to motivate visitors to support the cause.
