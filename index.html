@@ -35,7 +35,7 @@
     .left {
       background-color: #003366;
       color: #FFF7E1;
-      flex: 0 0 50%; /* Fixed width half */
+      flex: 0 0 50%;
       padding: 40px 24px;
       display: flex;
       flex-direction: column;
@@ -46,9 +46,6 @@
         0 4px 15px rgba(0, 0, 0, 0.3);
       max-width: 100%;
       box-sizing: border-box;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      /* Keep text max width smaller to fit nicely inside 50% container */
     }
 
     h1 {
@@ -56,14 +53,12 @@
       font-weight: 700;
       margin-bottom: 20px;
       text-shadow: 1px 1px 5px rgba(255, 201, 7, 0.6);
-      max-width: 100%;
     }
 
     p.lead {
       font-size: 1.25rem;
       margin-bottom: 30px;
       text-shadow: 0 0 5px rgba(255, 201, 7, 0.4);
-      max-width: 100%;
     }
 
     section {
@@ -72,8 +67,8 @@
       padding: 25px 20px;
       border-radius: 12px;
       width: 100%;
+      max-width: 550px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      max-width: 550px; /* slightly smaller max width */
       box-sizing: border-box;
     }
 
@@ -141,16 +136,16 @@
 
     .right {
       background-color: #1a1a1a;
-      flex: 0 0 50%; /* Fixed width half */
+      flex: 0 0 50%;
       overflow: hidden;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .right img {
-      width: 90%;
-      max-height: 100vh;
+      width: 100%;
+      height: 90vh;
       object-fit: cover;
       display: block;
       margin-top: -40px;
@@ -201,46 +196,10 @@
       text-align: center;
       margin-top: auto;
       font-size: 0.9rem;
-      color: #FFF7E1;
+      color: #1a1a1a;
       padding: 16px 0;
-      background-color: #003366;
-      text-shadow: 0 0 3px rgba(0,0,0,0.3);
-      position: relative;
-      bottom: 0;
-      left: 0;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-      .right {
-        height: 300px;
-        flex: 1 1 100%;
-      }
-      .right img {
-        height: 300px;
-        margin-top: 0;
-      }
-      .left, section, .btn-primary, .impact-message {
-        max-width: 100% !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        flex: 1 1 100%;
-      }
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .btn-primary {
-        width: 100%;
-        text-align: center;
-      }
-      section {
-        text-align: left;
-      }
+      background-color: white;
+      text-shadow: none;
     }
   </style>
 </head>
@@ -287,6 +246,10 @@
   </footer>
 </body>
 </html>
+
+
+
+
 
 
 
