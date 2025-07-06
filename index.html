@@ -6,51 +6,52 @@
   <title>charity: water — Clean Water for Everyone</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    body {
+      font-family: 'Proxima Nova', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .left {
+      background-color: #2E9DF7;
+      color: #FFF7E1;
+      flex: 1;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right {
+      background-color: #1a1a1a;
+      flex: 1;
+    }
+
     .topbar {
-      width: 100vw;
+      width: 100%;
       min-height: 80px;
       background: #fff;
       position: relative;
-      /* Prevent overflow from large logo */
       overflow: visible;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-    }
-
-    body {
-      font-family: 'Proxima Nova', sans-serif;
-      background-color: #2E9DF7;
-      color: #FFF7E1;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      /* Remove all padding so the topbar sits flush at the top */
-      padding: 0;
-      /* Set padding-top to match the topbar height only, so content starts below it */
-      padding-top: 0px;
-      margin: 0;
-      /* Remove any top padding that causes a gap above the topbar */
-    }
-
-    html {
-      /* Ensure no margin or padding on html element */
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      display: none;
     }
 
     .topbar img {
@@ -59,10 +60,8 @@
       margin: 0;
       display: block;
       position: absolute;
-      top: -50px; /* Move logo up so it overflows above the bar */
+      top: -50px;
       left: 24px;
-      /* Optional: add drop shadow for contrast */
-      /* filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08)); */
     }
 
     .topbar .btn-primary {
@@ -84,11 +83,6 @@
       border-radius: 10px;
     }
 
-    main {
-      max-width: 700px;
-      text-align: left;
-    }
-
     h1 {
       font-size: 3rem;
       font-weight: 700;
@@ -98,7 +92,6 @@
     p.lead {
       font-size: 1.25rem;
       margin-bottom: 30px;
-      color: #FFF7E1;
     }
 
     .btn-primary {
@@ -125,22 +118,38 @@
       background: rgba(255, 255, 255, 0.1);
       padding: 30px 25px;
       border-radius: 12px;
+      width: 100%;
     }
 
     section h2 {
       margin-bottom: 15px;
       color: #FFC907;
+      font-size: 1.4rem;
     }
 
     section p {
-      color: #FFF7E1;
       font-size: 1.1rem;
     }
 
+    .impact-message {
+      margin-top: 40px;
+      background: rgba(255, 201, 7, 0.15);
+      color: #FFC907;
+      padding: 18px 24px;
+      border-radius: 16px;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+    }
+
     footer {
+      width: 100%;
+      text-align: center;
       margin-top: 50px;
       font-size: 0.9rem;
       color: #FFF7E1;
+      padding: 16px 0;
+      background-color: #2E9DF7;
     }
 
     @media (max-width: 600px) {
@@ -151,22 +160,8 @@
         width: 100%;
         text-align: center;
       }
-      main {
-        text-align: center;
-      }
       section {
-        text-align: center;
-      }
-      .topbar .btn-primary {
-        right: 12px;
-        font-size: 1rem;
-        padding: 8px 14px;
-        height: 36px;
-        top: 8px;
-      }
-      .topbar img {
-        height: 90px;
-        top: -20px;
+        text-align: left;
       }
     }
   </style>
@@ -178,33 +173,38 @@
       Donate
     </a>
   </div>
-
-  <main>
-    <h1 style="text-align: left; margin-left: 0;">See the Change You Make. Instantly.</h1>
-    <p class="lead">
-      100% of your donation funds clean water for families in need--and we'll show you exactly where every dollar goes, with ral time updates and impact you can feel.
-    </p>
-
-    <section>
-      <h2>Our Impact</h2>
-      <p>
-        Since 2006, charity: water has funded more than 64,000 water projects in 29 countries, serving over 14 million people with clean water.
+  <div class="container">
+    <div class="left">
+      <h1>See the Change You Make. Instantly.</h1>
+      <p class="lead">
+        100% of your donation funds clean water for families in need--and we'll show you exactly where every dollar goes, with real time updates and impact you can feel.
       </p>
-    </section>
 
-    <section>
-      <h2>Transparency You Can Trust</h2>
-      <p>
-        We provide real-time updates on every project funded. Track progress from start to finish and see the impact you’re making.
-      </p>
-    </section>
-    <div style="margin-top: 20px; font-weight: bold; color: #FFC907; text-align: center;">
+      <section>
+        <h2>Our Impact</h2>
+        <p>
+          Since 2006, charity: water has funded more than 64,000 water projects in 29 countries, serving over 14 million people with clean water.
+        </p>
+      </section>
+
+      <section>
+        <h2>Transparency You Can Trust</h2>
+        <p>
+          We provide real-time updates on every project funded. Track progress from start to finish and see the impact you’re making.
+        </p>
+      </section>
+
+      <div class="impact-message">
         Just click the donate button above and see how you can impact the community.
+      </div>
     </div>
-  </main>
-
+    <div class="right">
+      <!-- Right side content if needed -->
+    </div>
+  </div>
   <footer>
     &copy; 2025 charity: water. All rights reserved.
   </footer>
 </body>
 </html>
+
